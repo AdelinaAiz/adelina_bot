@@ -70,7 +70,7 @@ def bot_message(message):
                                               "Ключевые слова: GPT, SQL, любовь.")
             db_state.set_state(message.chat.id, config.States.s_listen.value)  # Смена состояния диалога
         elif message.text == 'Ссылка ✅' or message.text == '/getlink':
-            bot.send_message(message.chat.id, 'Ссылка на исходный код моего бота: https://ya.ru/')
+            bot.send_message(message.chat.id, 'Ссылка на исходный код моего бота: https://github.com/AdelinaAiz/adelina_bot')
         elif message.text == 'Совет 🤓' or message.text == '/advice':
             bot.send_photo(message.chat.id, photo=open(f'media/images/{random.randint(1, 5)}.JPG', 'rb'))
         else:  # Сообщение от пользователя(не кнопка)
