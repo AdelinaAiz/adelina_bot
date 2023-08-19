@@ -72,7 +72,7 @@ def bot_message(message):
         elif message.text == 'Ссылка ✅' or message.text == '/getlink':
             bot.send_message(message.chat.id, 'Ссылка на исходный код моего бота: https://github.com/AdelinaAiz/adelina_bot')
         elif message.text == 'Совет 🤓' or message.text == '/advice':
-            bot.send_photo(message.chat.id, photo=open(f'media/images/{random.randint(1, 5)}.JPG', 'rb'))
+            bot.send_photo(message.chat.id, photo=open(f'media/images/{random.randint(1, 5)}.jpg', 'rb'))
         else:  # Сообщение от пользователя(не кнопка)
             if db_state.get_state(message.chat.id) == config.States.s_listen.value:
                 stories = dict(gpt=lambda x: open('media/audio/GPT.mp3', 'rb'),
